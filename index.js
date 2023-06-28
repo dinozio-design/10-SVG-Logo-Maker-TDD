@@ -3,28 +3,27 @@ const fs = require('fs');
 const jest = require('jest');
 // NOTE TO SELF: put a const svg something here and require the svg stuff you need
 
-const questions = [
-    {
-        type: 'input',
-        name: 'text',
-        message: 'Entre up to three characters'
-    },
-    {
-        type: 'input',
-        name: 'textColor',
-        message: 'Enter a color keyword (OR a hexadecimal number)'
-    },
-    {
-        type: 'list',
-        name: 'shape',
-        message: 'Chose a shape:'
-    },
-    {
-        type: 'input',
-        name: 'shapeColor',
-        message: 'Enter a color keyword (OR a hexadecimal number)'
-    }
-];
+const questions = [{
+    type: 'input',
+    name: 'text',
+    message: 'Entre up to three characters',
+},
+{
+    type: 'input',
+    name: 'textCol',
+    message: 'Enter a keyword',
+},
+{
+    type: 'list',
+    name: 'shape',
+    message: 'Chose a shape:',
+    choices: ['circle', 'triangle', 'square'],
+},
+{
+    type: 'input',
+    name: 'shapeColor',
+    message: 'Enter a color keyword (OR a hexadecimal number)',
+}];
 
 
 function writeToFile(fileName, data) {
@@ -35,10 +34,11 @@ function writeToFile(fileName, data) {
 
 function init() {
     inquirer
-        .createPromptModule(questions)
+        .prompt(questions)
         .then((answeres) => {
-            // const data = /* NOTE TO SELF: call the const that you used for SVG stuff and pass in the user input parametes*/
-            writeToFile()
+            const data = JSON.stringify(answeres);
+            /* NOTE TO SELF: call the const that you used for SVG stuff and pass in the user input parametes*/
+            writeToFile('logo.svg', data);
         })
 }
 
