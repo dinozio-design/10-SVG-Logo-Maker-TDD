@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
 // NOTE TO SELF: put a const svg something here and require the svg stuff you need
+const sVg = require(''); /** this will point to where I write my svGenerator */
 
 const questions = [{
     type: 'input',
@@ -36,10 +37,11 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answeres) => {
-            const data = JSON.stringify(answeres);
+            // const data = JSON.stringify(answeres);
+            const data = sVg(answeres);
             /* NOTE TO SELF: call the const that you used for SVG stuff and pass in the user input parametes*/
             writeToFile('logo.svg', data);
-        })
+        });
 }
 
 init();
