@@ -12,14 +12,24 @@ const questions = [
     {
         type: 'input',
         name: 'textColor',
-        message: 'Entre up to three characters'
+        message: 'Enter a color keyword (OR a hexadecimal number)'
+    },
+    {
+        type: 'list',
+        name: 'shape',
+        message: 'Chose a shape:'
+    },
+    {
+        type: 'input',
+        name: 'shapeColor',
+        message: 'Enter a color keyword (OR a hexadecimal number)'
     }
 ];
 
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
-        err ? console.error(err) : console.log(`Successfully Created ${fileName}`);
+        err ? console.error(err) : console.log(`Successfully Generated logo.svg`);
     });
 }
 
