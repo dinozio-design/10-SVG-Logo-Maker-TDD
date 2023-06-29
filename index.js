@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
 // NOTE TO SELF: put a const svg something here and require the svg stuff you need
-const sVg = require(''); /** this will point to where I write my svGenerator */
+const sVg = require('./lib/svGenerator.js'); /** this will point to where I write my svGenerator */
 
 const questions = [{
     type: 'input',
@@ -12,7 +12,7 @@ const questions = [{
 {
     type: 'input',
     name: 'textCol',
-    message: 'Enter a keyword',
+    message: 'Enter a text color keyword (OR a hexadecimal number)',
 },
 {
     type: 'list',
@@ -23,7 +23,7 @@ const questions = [{
 {
     type: 'input',
     name: 'shapeColor',
-    message: 'Enter a color keyword (OR a hexadecimal number)',
+    message: 'Enter a shape color keyword (OR a hexadecimal number)',
 }];
 
 
