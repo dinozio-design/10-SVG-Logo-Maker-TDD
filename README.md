@@ -39,7 +39,7 @@ If you have any questions, you can email them to me.
 
 ### Deployed Links
 
-1. You can find the video walkthrough of a typical user flow of the application **here:** <br>[10-SVG-Logo-Maker-TDD - link](https://drive.google.com/file/d/1NwPRD4THDTfRObkEHVZuyi3QspYRBKmD/view?usp=sharing)
+1. You can find the video walkthrough of a typical user flow of the application **here:** <br>[10-SVG-Logo-Maker-TDD - link](https://drive.google.com/file/d/1_FcGVFKz6YE3KSgEASsGYP0DHNEclM5K/view?usp=sharing)
 
 2. You can find the URL of my GitHub repository that contains this code **here:** <br>[GitHub Repo - link](https://github.com/dinozio-design/10-SVG-Logo-Maker-TDD)
 
