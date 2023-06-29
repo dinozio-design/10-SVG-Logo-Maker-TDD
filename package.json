@@ -1,0 +1,29 @@
+{
+  "name": "10-svg-logo-maker-tdd",
+  "version": "1.0.0",
+  "description": "<!-- challenge readme -->",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinozio-design/10-SVG-Logo-Maker-TDD.git"
+  },
+  "author": "Sam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dinozio-design/10-SVG-Logo-Maker-TDD/issues"
+  },
+  "homepage": "https://github.com/dinozio-design/10-SVG-Logo-Maker-TDD#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
