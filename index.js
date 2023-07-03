@@ -4,6 +4,7 @@ const jest = require('jest');
 // NOTE TO SELF: put a const svg something here and require the svg stuff you need
 const sVg = require('./lib/svGenerator.js'); /** this will point to where I write my svGenerator */
 
+
 const questions = [{
     type: 'input',
     name: 'text',
@@ -16,13 +17,13 @@ const questions = [{
 },
 {
     type: 'list',
-    name: 'shape',
+    name: 'shapeForm',
     message: 'Chose a shape:',
     choices: ['circle', 'triangle', 'square'],
 },
 {
     type: 'input',
-    name: 'shapeColor',
+    name: 'shapeCol',
     message: 'Enter a shape color keyword (OR a hexadecimal number)',
 }];
 
@@ -39,6 +40,7 @@ function init() {
         .then((answeres) => {
             // const data = JSON.stringify(answeres);
             const data = sVg(answeres);
+            console.log(data);
             /* NOTE TO SELF: call the const that you used for SVG stuff and pass in the user input parametes*/
             writeToFile('logo.svg', data);
         });
