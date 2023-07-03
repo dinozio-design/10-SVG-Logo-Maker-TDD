@@ -40,7 +40,7 @@ function init() {
         .then((answeres) => {
             // const data = JSON.stringify(answeres);
             const data = sVg(answeres);
-            // console.log(data);
+            console.log(data);
             /* NOTE TO SELF: call the const that you used for SVG stuff and pass in the user input parametes*/
             writeToFile('logo.svg', data);
         });
